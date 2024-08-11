@@ -7,7 +7,7 @@ const app = express();
 const port = 3000;
 
 // Path default untuk file MP3 di root folder
-const defaultSoundPath = path.resolve(__dirname, 'sound.mp3');
+const defaultSoundPath = path.resolve(__dirname, 'alert.mp3');
 
 // Middleware untuk parsing JSON
 app.use(express.json());
