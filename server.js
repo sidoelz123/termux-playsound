@@ -1,7 +1,7 @@
-// server.js
 const express = require('express');
 const path = require('path');
 const { exec } = require('child_process');
+const cors = require('cors'); // Import CORS
 
 const app = express();
 const port = 3000;
@@ -11,6 +11,9 @@ const defaultSoundPath = path.resolve(__dirname, 'alert.mp3');
 
 // Middleware untuk parsing JSON
 app.use(express.json());
+
+// Konfigurasi dan penggunaan middleware CORS
+app.use(cors()); // Mengaktifkan CORS untuk semua rute
 
 let playerProcess = null;
 
